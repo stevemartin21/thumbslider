@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Thumbnail Custom Gallery</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS AIzaSyDbElyUzqRxrJl0qEnkxfxDgELe48remfI-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="formStyle.css">
+    <style>
+
+    #spacer{
+        margin:0px;
+    }
+
+    .photo{
+        width:50%;
+        margin:0px auto;
+        
+    }
+
+    .photo img{
+        width:100%;
+        height:300px;
+    }
+
+    .thumb{
+        display: inline-block;
+        width: 33%;
+    }
+
+    .thumb img{
+        width:100%;
+    }
+
+    .center{
+        width:30%;
+        margin:10px auto;
+
+    }
+
+    .prev, .next{
+        border-radius: 10px;
+    }
+
+    .list-group{
+        color:black;
+    }
+
+    .fa{
+
+        margin:0px 5px;
+    }
+    #map{
+        height: 400px;
+    }
+        @media (max-width: 740px) {
+            .full-height,
+            .full-height body,
+            .full-height header,
+            .full-height header .view {
+                height: 700px; 
+            } 
+        }
+    </style>
+</head>
+
+<div class="container">
+
+        <div class="jumbotron">
+            <h1 class="h1-responsive">Interactive Thumbnail Gallery</h1>
+            <p class="lead">Interactive Photo Gallery</p>
+            <hr class="my-2">
+            <p>Begin
+            </p>
+            
+                    <label class="switch">
+
+                                  <input type="checkbox" id="beginIt">
+                                  <span class="slider round"></span>
+                    </label>
+          
+
+
+            
+              
+        </div>
+
+</div>
+
+
+
+<div class="container">
+
+    <div class="photo" id="one">
+
+        <img src="images/fortDoug.jpg">
+
+
+
+    </div>
+
+    <div class="photo" id="two">
+
+        <img src="images/mantiPres.jpg">
+
+    </div>
+
+    <div class="photo" id="three">
+
+            <img src="images/payson.jpg">
+
+    </div>
+
+  <div class="card" id="spacer">
+    <div class="card-body">
+        Select Below
+    </div>
+</div>  
+
+
+
+<div class="container">
+
+    <div class="thumb" id="thumb1">
+
+            <img src="thumbnail/fortDoug.jpg">
+
+    
+    </div>
+
+    <div class="thumb" id="thumb2">
+
+            <img src="thumbnail/mantiPres.jpg">
+
+    
+    </div>
+
+    <div class="thumb" id="thumb3">
+
+            <img src="thumbnail/payson.jpg">
+
+    
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+ <div class="container" id="faq">
+        <form>
+            <p class="h4 text-center mb-4">Contact Us</p>
+
+            <!-- Material input text -->
+            <div class="md-form">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="materialFormContactNameEx" class="form-control">
+                <label for="materialFormContactNameEx">Your name</label>
+            </div>
+
+            <!-- Material input email -->
+            <div class="md-form">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="email" id="materialFormContactEmailEx" class="form-control">
+                <label for="materialFormContactEmailEx">Your email</label>
+            </div>
+            
+            <!-- Material input subject -->
+            <div class="md-form">
+                <i class="fa fa-tag prefix grey-text"></i>
+                <input type="text" id="materialFormContactSubjectEx" class="form-control">
+                <label for="materialFormContactSubjectEx">Subject</label>
+            </div>
+            
+            <!-- Material textarea message -->
+            <div class="md-form">
+                <i class="fa fa-pencil prefix grey-text"></i>
+                <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3"></textarea>
+                <label for="materialFormContactMessageEx">Your message</label>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-secondary" type="submit">Send<i class="fa fa-paper-plane-o ml-2"></i></button>
+            </div>
+        </form>
+    </div>
+<!-- Material form contact -->
+
+
+
+
+
+ <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!--  Bootstrap tooltips  -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!--  Bootstrap core JavaScript  -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--  MDB core JavaScript  -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script type="text/javascript" src="js/thumbSlider.js"></script>
+
+    <script>
+        //Animation init
+        new WOW().init();
+        
+        //Modal
+        $('#myModal').on('shown.bs.modal', function () {
+          $('#myInput').focus()
+        })
+        
+        // Material Select Initialization
+        $(document).ready(function() {
+            $('.mdb-select').material_select();
+        });
+        
+        // MDB Lightbox Init
+        $(function () {
+            $("#mdb-lightbox-ui").load("../mdb-addons/mdb-lightbox-ui.html");
+        });
+    </script>
+    
+</body>
+
+</html>
